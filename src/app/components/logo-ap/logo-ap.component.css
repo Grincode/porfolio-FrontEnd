@@ -12,6 +12,7 @@
 
 #logoAP{
     width: 150px;
+    animation: App-logo-spin infinite 20s linear;
 }
 
 svg{

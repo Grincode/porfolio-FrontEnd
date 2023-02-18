@@ -13,7 +13,7 @@ export class AcercadeComponent implements OnInit {
   constructor(public personaService: PersonaService){ }
 
   ngOnInit(): void {
-    this.personaService.getPersona().subscribe(data => {this.persona = data})   
+    this.personaService.getPersona().subscribe((data: persona) => {this.persona = data})   
   }
 
-}
+}    
