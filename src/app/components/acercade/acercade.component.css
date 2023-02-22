@@ -23,22 +23,20 @@ div{
 
 @media (min-width: 576px) {
         #fotoperfil{
-            position: absolute;
-            width: 15%;
-            border-radius:100%;
+            
+            
+            border-radius:10%;
             box-shadow: 3px 3px 3px #223144;
-            left: 3%;
-            top: 200px;
+          
     }
 }
 
 @media (max-width: 576px) {
     #fotoperfil{
-        position: absolute;
-        width: 20%;
-        border-radius:100%;
+        
+        
+        border-radius:10%;
         box-shadow: 3px 3px 3px #223144;
-        left: 41%;
-        top: 350px;
+        
     }
 }
