@@ -1,26 +1,27 @@
 .container{
     display: flex;
     justify-content: space-between;
-    align-items: center;  
-    
+    align-items: center;      
 }
 
-
 #logoAP{
-    width: 150px;
-        
+    width: 150px;        
 }
 
 .btn{
-    border-width: small;
-    
+    border-width: small;    
 }
 
 .list-group{
-    --bs-list-group-bg: transparent;   
+    --bs-list-group-bg: transparent;     
 }
 
 .fa-brands.fa-2x:hover{
     --bs-text-opacity: 1;
-    color: #B67580 !important;
+    color: #B67580 !important;    
 }
+
+.list-group-item {
+    border: none;
+}
+
