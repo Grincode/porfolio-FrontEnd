@@ -18,7 +18,7 @@
 
 .fa-brands.fa-2x:hover{
     --bs-text-opacity: 1;
-    color: #B67580 !important;    
+    color: lightsalmon !important;    
 }
 
 .list-group-item {
@@ -27,6 +27,21 @@
 
 
 button {
-    background-color: transparent;
-    border: none;
+    box-shadow: inset 0 0 0 0 lightsalmon;
+    color: white;
+    margin: 0 -.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
+
+button:hover {
+    box-shadow: inset 100px 0 0 0 lightsalmon   ;
+    color: black;
+    
+
+
+
+    
+    
+}
+
+
