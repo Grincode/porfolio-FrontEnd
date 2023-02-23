@@ -28,7 +28,22 @@
           ><i class="fa-brands fa-instagram fa-2x text-white"></i
         ></a>
       </li>
-    <li>
+      <li class="list-group-item">
+        <button
+          type="button"
+          class="fa-solid fa-user-lock fa-2x text-white"
+          (click)="login()"
+          *ngIf="!isLogged"
+        ></button>
+        <button
+          type="button"
+          class="fa-solid fa-user-unlock fa-2x text-white"
+          (click)="onLogout()"
+          *ngIf="isLogged"
+        ></button>
+      </li>
+    </ul>
+
     <form class="d-flex" role="login">
       <button
         type="button"
@@ -47,7 +62,5 @@
         SALIR
       </button>
     </form>
-  </li>
-</ul>
   </div>
 </nav>
