@@ -1,0 +1,28 @@
+[debug] [2023-02-24T18:30:38.760Z] ----------------------------------------------------------------------
+[debug] [2023-02-24T18:30:38.762Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\BLACKQUEEN\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-02-24T18:30:38.763Z] CLI Version:   11.23.1
+[debug] [2023-02-24T18:30:38.763Z] Platform:      win32
+[debug] [2023-02-24T18:30:38.763Z] Node Version:  v18.13.0
+[debug] [2023-02-24T18:30:38.764Z] Time:          Fri Feb 24 2023 15:30:38 GMT-0300 (hora estándar de Argentina)
+[debug] [2023-02-24T18:30:38.764Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-24T18:30:38.768Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-02-24T18:30:38.902Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-24T18:30:38.902Z] > authorizing via signed-in user (juanpetarcich@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Onedrive\01 PROYECTOS\ArgPrograma\Proyecto_final\porfolio-FrontEnd
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[warn] !  Unable to fetch the CLI MOTD and remote config. 
+[debug] [2023-02-24T18:30:38.932Z] Failed to fetch MOTD FirebaseError: Failed to make request to https://firebase-public.firebaseio.com/cli.json

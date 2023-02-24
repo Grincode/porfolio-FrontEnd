@@ -1,17 +1,25 @@
 <div class="row">
-    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <img src="../../../assets/img/fotoperfil.jpg" class="img-fluid" id="fotoperfil">        
-    </div>
-    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
-        <p>Full Stack Web Developer Jr</p>
-    </div>
-        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-            <span>
-                <h3 class="tittle">Acerca de mi</h3>
-                <p class="blocktext">Me apasiona mi trabajo y dedico la mayor parte de mi tiempo a mejorar y en alcanzar nuevos objetivos. Me considero una persona autodidacta buscando siempre aprender de cada persona con la que me relaciono e investigando para avanzar, me gustan los nuevos desafíos, soy una persona muy sociable teniendo siempre una buena reclacion con jefes y compañeros de equipo<br><br>
-                    Como líder de operaciones tengo a cargo un equipo de 20 personas, para las cuales busco siempre su crecimiento personal y laboral mediante coaching y feedback constante, monitoreando sus KPI y trabajando sobre sus habilidades blandas para potenciar sus capacidades. Poseo conocimientos en comunicación asertiva, metodologías ágiles, SCRUM, PMO, PMI, análisis y gestión de datos.<br><br>
-                    Como desarrollador tengo experiencia en metodologias ágiles seguimientos de proyectos con JIRA, trabajando con estas tecnologías | HTML | CSS | JavaScript | Typescript | Bootstrap | AngularJS | Git | Java spring boot | SQL y herramientas de diseño como Figma, PS, Indesign, Illustrator, así como tambien en administración entornos windows y Linux, actualmente me encuentro finalizando estudios en Analista de Sistemas, y completando stack de backend con Java en Oracle.</p>
-            </span>
-        </div>
+      <button type="button" class="btn btn-primary" routerLink="/editacercade/1" *ngIf="isLogged">
+        Editar Acerca de
+    </button>
 </div>
+  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+    <img
+      src={{persona.img}}
+      class="img-fluid"
+      id="fotoperfil"
+    />
+  </div>
+  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+    <p id="nombre">{{ persona.nombre }} {{ persona.apellido }}</p>
+    <p>Full Stack Web Developer Jr</p>
+  </div>
+  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+    <span>
+      <h3 class="tittle">Acerca de mi</h3>
+      <p class="blocktext">
+      {{persona.descripcion}}
+      </p>
+    </span>
+  </div>
+

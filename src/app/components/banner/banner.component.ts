@@ -8,12 +8,12 @@ import { PersonaService } from 'src/app/service/persona.service';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit {
-  persona: persona = new persona("","","");
+  persona: persona = null;
 
   constructor(public personaService: PersonaService){ }
 
   ngOnInit(): void {
-    this.personaService.getPersona().subscribe((data: persona) => {this.persona = data})   
+    
   }
 
 }  
