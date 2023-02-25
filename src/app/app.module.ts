@@ -25,6 +25,9 @@ import { EditSkillComponent } from './components/skills/edit-skill.component';
 import { NewSkillComponent } from './components/skills/new-skill.component';
 import { HysComponent } from './components/skills/hys.component';
 import { EditAcercaDeComponent } from './components/acercade/edit-acerca-de.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -55,7 +58,9 @@ import { EditAcercaDeComponent } from './components/acercade/edit-acerca-de.comp
     BrowserAnimationsModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
  
   ],
   providers: [
