@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -59,13 +59,16 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
     FormsModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    
+    
+    
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     provideStorage(() => getStorage())
  
   ],
   providers: [
-    interceptorProvider
-    
+    interceptorProvider,
+        
   ],
   bootstrap: [AppComponent]
 })
