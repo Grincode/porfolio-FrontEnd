@@ -17,8 +17,8 @@ export const environment = {
   
 
     
-    URL: 'http://localhost:8080/'
-    //URL: 'https://alleged-kylynn-grincode.koyeb.app/'
+    //URL: 'http://localhost:8080/'
+    URL: 'https://alleged-kylynn-grincode.koyeb.app/'
   };
 
 /*

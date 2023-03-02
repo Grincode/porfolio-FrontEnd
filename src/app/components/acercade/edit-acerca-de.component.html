@@ -19,10 +19,6 @@
                     <input type="file"  id="img" name="img" [(ngModel)]="persona.img" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
                 </div>
                 <br>
-                <p>////////////////////////////////</p>
-                <input type="file" accept=".png, .jpg, .jpeg" (change)="cargarImagen($event)">
-                <p>////////////////////////////////</p>
-                <img src="{{imagenes[0]}}" alt="imagen subida" width="200px">
                 <div class="imagen">
                     <img [src]="imageService.url" width="200px">
                 </div>

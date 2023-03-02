@@ -10,6 +10,7 @@ firebase.initializeApp(environment.firebaseConfig)
 })
 export class StorageService {
   storareRef = firebase.app().storage().ref();
+  url: string = "";
 
 
   constructor() {}

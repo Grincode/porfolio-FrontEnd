@@ -15,7 +15,7 @@ export class EditAcercaDeComponent implements OnInit  {
   persona: persona = null;
 
   constructor(
-    private activatedRoute: ActivatedRoute,
+    private activatedRouter: ActivatedRoute,
     private personaService: PersonaService,
     private router: Router,
     public imageService: ImageService,
@@ -23,21 +23,21 @@ export class EditAcercaDeComponent implements OnInit  {
   
    imagenes: any[] = [];
    cargarImagen(event: any){
+    const id = this.activatedRouter.snapshot.params['id'];
+    const nombre = "perfil_" + id
     let archivos  = event.target.files
     let reader = new FileReader();
-    let nombre = "perfil"
+    
 
     reader.readAsDataURL(archivos[0]);
     reader.onloadend =  () => {
       console.log(reader.result);
       this.imagenes.push(reader.result);
-      this.storageService.subirImagen(nombre + "_" + Date.now(), reader.result).then(urlImagen => {
+      this.storageService.subirImagen(nombre , reader.result).then(urlImagen => {
         console.log(urlImagen);
       });
     }
     
-
-
     console.log(event.target.files); 
 
     
@@ -50,7 +50,7 @@ export class EditAcercaDeComponent implements OnInit  {
 
 
   ngOnInit(): void {
-    const id = this.activatedRoute.snapshot.params['id'];
+    const id = this.activatedRouter.snapshot.params['id'];
     this.personaService.detail(id).subscribe(
       data => {
         this.persona = data;
@@ -63,7 +63,8 @@ export class EditAcercaDeComponent implements OnInit  {
   }
 
   onUpdate(): void{
-  const id = this.activatedRoute.snapshot.params['id'];
+  const id = this.activatedRouter.snapshot.params['id'];
+  this.persona.img = this.imageService.url
     this.personaService.update(id, this.persona).subscribe(
     data => {
       this.router.navigate(['']);
@@ -76,7 +77,7 @@ export class EditAcercaDeComponent implements OnInit  {
 
 
   uploadImage($event: any){
-    const id = this.activatedRoute.snapshot.params['id'];
+    const id = this.activatedRouter.snapshot.params['id'];
     const name = "perfil_" + id;
     this.imageService.uploadImage($event, name)
   }
