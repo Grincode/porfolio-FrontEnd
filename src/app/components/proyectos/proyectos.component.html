@@ -1,12 +1,40 @@
 <div class="row">
-    <h1>Proyectos</h1>
-    <div class="contenedor">
-        <div class="col-sm-12 col-md-7 col-lg-7 web1">
-            <h3>Barber shop landing page</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sunt quidem corporis, veritatis deserunt iure asperiores eius mollitia dicta? Blanditiis provident voluptatibus nesciunt minus. Rerum, numquam repellat. Porro, harum culpa.</p>
-        </div>
-        <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1  offset-lg-1 web2">
-            <img src="../../../assets/img/webpageejemplo.png" class="img-fluid img-proyecto">
-        </div>
-    </div>
+  <div class="titulo">
+      <h1>Proyectos Realizados</h1>
+  </div>
+
+  <div class="contenido">
+      <div class="col-lg-2">
+          <button type="button" class="btn btn-dark newproy" routerLink="/newpro" *ngIf="isLogged">
+              Agregar Proyecto
+          </button>
+      </div>
+
+      <div class="container">
+          <div class="proyecto" *ngFor="let Proyecto of proyecto">
+              <div class="col-sm-12 col-md-7 col-lg-7 parte1">
+                  <h2>{{Proyecto.nombreP}}</h2>
+                  <h4>Año {{Proyecto.fechaP}}</h4>
+                  <br>
+                  <p>{{Proyecto.descripcionP}}</p>
+                  <br>
+                  <div *ngIf='Proyecto.linkP != ""'>
+                      <a href={{Proyecto.linkP}} target="_blank">
+                          <button class="btn btn-dark">Link Proyecto</button>
+                      </a>
+                  </div>
+              </div>
+              <div class="col-sm-12 col-md-4 col-lg-4 offset-md-1 offset-lg-1 parte2">
+                  <img src={{Proyecto.imagenP}} 
+                  alt=`{{Proyecto.nombreP}}`
+                  class="img-fluid img-proyecto">
+              </div>
+              <div *ngIf="isLogged" class="divbtn">
+                  <button class="btn btn-dark btnedit" routerLink="/editpro/{{Proyecto.id}}"><i class="bi bi-pencil-fill"></i></button>
+                  <button class="btn btn-danger btndel" (click)="delete(Proyecto.id)"><i class="bi bi-trash-fill"></i></button>
+              </div> 
+          </div>   
+      </div>
+  </div>
 </div>
+

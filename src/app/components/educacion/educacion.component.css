@@ -1,9 +1,89 @@
-.row{
-    padding: 20px;
+.row {
+    
+    border-radius: 20px;
+    margin: 2em;
+   
 }
-div{
-    background-color: #f1f1f1;
+
+.contenido {
+    padding: 30px;
+    background-color: #fff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow:  5px 5px 5px black;
 }
-h1, h3{
-    display: inline;
+
+.titulo {
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(..//..//..//assets/img/background4.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+h1 {
+    display: inline-block;
+    background-color: black;
+    color: #fff;
+    padding: 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin: 0;
+    box-shadow:  5px 5px 5px black;
+}
+
+
+.btnedit, .btndel {
+    height: 3em;
+    width: 3em;
+    margin: 0.5em;
+}
+
+.container {
+    min-width: 100%;
+}
+
+.parte { 
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 1em;
+}
+
+.img-educacion {
+    background-color: black;
+}
+
+.educacion {
+    background-color: #cfe2e2;
+    margin: 2em;
+    padding: 2em;
+    border-radius: 20px;
+}
+
+@media (max-width: 575px) {
+    .educacion {
+        margin-left: 0em;
+        margin-right: 0em;
+        padding: 0em;
+        text-align: center;
+    }
+    .contenido {
+        padding: 0em;
+        text-align: center;
+
+    }
+    .newedu {
+        margin-top: 1em;
+    }
+
+    .parte {
+        display: block;
+    }
 }

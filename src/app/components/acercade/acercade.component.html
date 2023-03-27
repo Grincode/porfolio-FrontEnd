@@ -1,31 +1,24 @@
-<br>
-<div>
-  <button
-    type="button"
-    class="btn btn-primary"
-    routerLink="/editacercade/1"
-    *ngIf="isLogged"
-  >
-    Editar Persona
-  </button>
+<div class="row" *ngIf="persona">
+  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 contimg">
+      <img src={{persona.img}} 
+      alt="Foto de perfil" 
+      class="img-fluid"
+      id="fotodeperfil">
   </div>
-
-<div class="row">
-
-  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-    <img src="{{ persona.img }}" class="img-fluid" id="fotoperfil" />
+  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 offset-sm-1 offset-md-1 offset-lg-1 contnomb">
+      <div>
+          <h2 id="nombre">{{persona.nombre}} {{persona.apellido}}</h2>
+          <p>Full-Stack Web Developer Jr.</p>
+      </div>
   </div>
-  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-    <p id="nombre">{{ persona.nombre }} {{ persona.apellido }}</p>
-    <p>Full Stack Web Developer Jr</p>
+  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 offset-sm-1 offset-md-1 offset-lg-1 acercade">
+      <div class="mipersona">
+          <h2>Acerca de mí</h2>
+          <p>{{persona.descripcion}}</p>
+      </div>
+      <button type="button" class="btn btn-light btneditpers" routerLink="/editacercade/1" *ngIf="isLogged">
+          <i class="bi bi-pencil-fill"></i> Editar Acerca de
+      </button>
   </div>
-  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 descrip">
-    <span>
-      <h3 class="tittle">Acerca de mi</h3>
-      <p class="blocktext">
-        {{ persona.descripcion }}
-      </p>
-    </span>
-  </div>
-
+  
 </div>

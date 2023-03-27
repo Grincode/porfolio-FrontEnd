@@ -1,29 +1,35 @@
-<div class="row">
-
-    <h1>Hard & Soft skills</h1>
-    <div class="col-lg-2">
-        <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged">Nueva Skill</button>
+<div class="row hysskill">
+    <div class="titulo">
+        <h1>Hard & Soft Skills</h1>
     </div>
 
-
-    <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
+    <div class="contenido">
+        <div class="col-lg-2 divnewskill">
+            <button type="button" class="btn btn-dark" routerLink="/newskill" *ngIf="isLogged">
+                Agregar Skill
+            </button>
+        </div>
+        <div class="row">
+            <div class="text-center col-sm-12 col-md-6 col-lg-4 circulo" *ngFor="let skill of skill">
+ 
         <circle-progress 
-        [percent]="(skill.porcentaje)" 
-        [radius]="90" [imageSrc]="''" 
-        [title]="(skill.nombre)"
-        [titleColor]="'#212F3C'"
-        [showTitle]="true" 
-        [showImage]="false" 
-        [imageHeight]="70" 
-        [imageWidth]="70" 
-        [showUnits]="false"
-        [showSubtitle]="false" 
-        [outerStrokeWidth]="16" 
-        [innerStrokeWidth]="2" 
-        [outerStrokeColor]="'#78C000'"
-        [innerStrokeColor]="'#C7E596'" 
-        [animation]="true" 
-        [animationDuration]="600">
+        [radius]= "60"
+        [space]= "-10"
+        [outerStrokeGradient]= "true"
+        [outerStrokeWidth]= "10"
+        [outerStrokeColor]= "'#4882c2'"
+        [outerStrokeGradientStopColor]= "'#53a9ff'"
+        [innerStrokeColor]= "'#e7e8ea'"
+        [innerStrokeWidth]= "10"
+        [title]= "(skill.nombre)"
+        [percent]="(skill.porcentaje)"
+        [animateTitle]= "false"
+        [animationDuration]= "1000"
+        [showUnits]= "false"
+        [showBackground]= "false"
+        [clockwise]= "false"
+        [startFromZero]= "false"
+        [lazy]= "true">
         </circle-progress>
 
         <div>

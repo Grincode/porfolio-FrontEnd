@@ -1,54 +1,36 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img
-        src="../../../assets/img/APLogo-20-20.png"
-        alt="Logo Argentina Programa"
-        id="logoAP"
-      />
-    </a>
-    <ul class="list-group list-group-horizontal">
-      <li class="list-group-item">
-        <a href="https://www.linkedin.com/in/juanpetarcich/" target="_blank"
-          ><i class="fa-brands fa-linkedin fa-2x text-white"></i
-        ></a>
-      </li>
-      <li class="list-group-item">
-        <a href="https://www.facebook.com/juanpetarcich/" target="_blank"
-          ><i class="fa-brands fa-facebook fa-2x text-white"></i
-        ></a>
-      </li>
-      <li class="list-group-item">
-        <a href="https://github.com/Grincode" target="_blank"
-          ><i class="fa-brands fa-github fa-2x text-white"></i
-        ></a>
-      </li>
-      <li class="list-group-item">
-        <a href="https://www.instagram.com/juanpetarcich/" target="_blank"
-          ><i class="fa-brands fa-instagram fa-2x text-white"></i
-        ></a>
-        <li>
-          <form class="list-group-item" role="login">
-            <button
-              type="button"
-              class="btn btn-outline-light btn-sm"
-              (click)="login()"
-              *ngIf="!isLogged"
-            >
-              INGRESAR
-            </button>
-            <button
-              type="button"
-              class="btn btn-outline-light btn-sm"
-              (click)="onLogout()"
-              *ngIf="isLogged"
-            >
-              SALIR
-            </button>
-          </form>
-        </li>
-      
-    </ul>
+<header>
+  <a class="navbar-brand" href="https://argentinaprograma.inti.gob.ar/">
+    <img
+      src="../../../assets/img/APLogo-20-20.png"
+      alt="Logo Argentina Programa"
+      id="logo"
+      data-aos="zoom-out" data-aos-duration="1500"/>
+  </a>
+<nav>
+  <ul>
+    <li><a href="">Inicio</a></li>
 
-  </div>
+    <li>
+        <form class="list-group-item" role="login">
+          <button
+            type="button"
+            class="btn btn-outline-light btn-sm"
+            (click)="login()"
+            *ngIf="!isLogged"
+          >
+            INGRESAR
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-light btn-sm"
+            (click)="onLogout()"
+            *ngIf="isLogged"
+          >
+            SALIR
+          </button>
+        </form>
+      </li>
+    </ul>
 </nav>
+</header>
+

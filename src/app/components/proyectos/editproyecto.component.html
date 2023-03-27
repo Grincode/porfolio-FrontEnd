@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="margen">
+        <div class="container" *ngIf="proyecto">
+            <div *ngIf="isLogged == false">                
+            </div>
+            <div *ngIf="isLogged == true">
+                <div class="titulo">
+                    <h1>Editar Proyecto</h1>
+                </div>
+                <div class="contenido">
+                    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                        <div class="form-group">
+                            <label for="nombreP"><b>Nombre del Proyecto</b></label>
+                            <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="proyecto.nombreP" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="descripcionP"><b>Descripción del Proyecto</b></label>
+                            <textarea type="text" class="form-control" id="descripcionP" name="descripcionP" [(ngModel)]="proyecto.descripcionP" required></textarea>
+                          
+                        </div>
+                        <div class="form-group">
+                            <label for="fechaP"><b>Fecha de realización del proyecto</b></label>
+                            <input type="text" class="form-control" id="fechaP" name="fechaP" [(ngModel)]="proyecto.fechaP" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="linkP"><b>Link del proyecto</b></label>
+                            <input type="text" class="form-control" id="linkP" name="linkP" [(ngModel)]="proyecto.linkP" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="imagenP"><b>Imagen Del Proyecto</b></label>
+                            <input type="file" class="form-control" id="imagenP" name="imagenP" (ngModel)="proyecto.imagenP"
+                            (change)="uploadImage($event)"
+                            accept=".jpg, .jpeg, .png">
+                        </div>
+                        <br>
+                        <div class="imagen">
+                            <img [src]="proyecto.imagenP" width="200px" alt="Imagen Proyecto" *ngIf='imageService.url == ""'>
+                            <img [src]="imageService.url" width="200px" alt="Imagen Proyecto" *ngIf='imageService.url != ""'>
+                        </div>
+                        <br>
+                        <div class="boton">
+                            <button class="btn btn-dark">Guardar</button>
+                        </div>
+                    </form>
+                    <br>
+                    <div class="boton">
+                        <button class="btn btn-danger" (click)="cancel()">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+</div>

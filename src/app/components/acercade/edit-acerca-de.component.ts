@@ -12,6 +12,7 @@ import { StorageService } from 'src/app/service/storage.service';
   
 })
 export class EditAcercaDeComponent implements OnInit  {
+  
   persona: persona = null;
 
   constructor(
@@ -21,32 +22,16 @@ export class EditAcercaDeComponent implements OnInit  {
     public imageService: ImageService,
     private storageService: StorageService) {}
   
-   imagenes: any[] = [];
-   cargarImagen(event: any){
-    const id = this.activatedRouter.snapshot.params['id'];
-    const nombre = "perfil_" + id
-    let archivos  = event.target.files
-    let reader = new FileReader();
+   
+
     
 
-    reader.readAsDataURL(archivos[0]);
-    reader.onloadend =  () => {
-      console.log(reader.result);
-      this.imagenes.push(reader.result);
-      this.storageService.subirImagen(nombre , reader.result).then(urlImagen => {
-        console.log(urlImagen);
-      });
-    }
     
-    console.log(event.target.files); 
+
 
     
   
-  }
-
-  funcionDeLectura(){
-    console.log("Hola")
-  }
+  
 
 
   ngOnInit(): void {

@@ -20,12 +20,12 @@ export class SExperienciaService {
     return this.httpClient.get<Experiencia>(this.URL + `detail/${id}`);
   } 
 
-  public save(experiencia: Experiencia): Observable<any>{
-    return this.httpClient.post<any>(this.URL + 'create', experiencia);
+  public save(proyecto: Experiencia): Observable<any>{
+    return this.httpClient.post<any>(this.URL + 'create', proyecto);
   }
 
-  public update(id: number, experiencia: Experiencia): Observable<any>{
-    return this.httpClient.put<any>(this.URL + `update/${id}`, experiencia);
+  public update(id: number, proyecto: Experiencia): Observable<any>{
+    return this.httpClient.put<any>(this.URL + `update/${id}`, proyecto);
   }
 
   public delete(id: number): Observable<any>{

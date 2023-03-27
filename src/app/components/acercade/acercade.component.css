@@ -1,61 +1,52 @@
-.div {
-    padding: 20px;
-    background-color: #f1f1f1;
+#name {
+  text-align: center;
 }
 
 div {
-    
-    text-align: center;
+  padding: 15px;
+  background-color: #f1f1f1;
 }
 
 #nombre {
-    font-weight: bold;
-    margin-top: 10%;
-}
-
-.btn-info{
- color: whitesmoke;
- text-transform: uppercase;
+  font-weight: bold;
 }
 
 .tittle {
-    color: #B67580;
+  color: purple;
 }
 
 .blocktext {
-    color: #0D0A0B
+  color: #0d0a0b;
 }
 
 @media (min-width: 576px) {
-    #fotoperfil {
+  #fotoperfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    box-shadow: 3px 3px 3px #223144;
+  }
 
-
-        border-radius: 100%;
-        box-shadow: 3px 3px 3px #223144;
-
-    }
-
-    .descrip {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
+  .descrip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (max-width: 576px) {
-    #fotoperfil {
+  #fotoperfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    box-shadow: 3px 3px 3px #223144;
+  }
 
-
-        border-radius: 100%;
-        box-shadow: 3px 3px 3px #223144;
-
-    }
-
-    .descrip {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
+  .descrip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

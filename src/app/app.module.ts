@@ -16,7 +16,6 @@ import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './components/login/login.component';
 import { interceptorProvider } from './service/interceptor-service';
-import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
 import { NeweducacionComponent } from './components/educacion/neweducacion.component';
@@ -28,6 +27,10 @@ import { EditAcercaDeComponent } from './components/acercade/edit-acerca-de.comp
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { NewProyectoComponent } from './components/proyectos/newproyecto.component';
+import { EditProyectoComponent } from './components/proyectos/editproyecto.component';
+
 
 @NgModule({
   declarations: [
@@ -38,8 +41,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     AcercadeComponent,
     ExperienciaComponent,
     EducacionComponent,
-    HysComponent,
-    ProyectosComponent,
+    HysComponent,    
     FooterComponent,
     HomeComponent,
     LoginComponent,
@@ -49,16 +51,20 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     EditeducacionComponent,
     EditSkillComponent,
     NewSkillComponent,
-    EditAcercaDeComponent
-
+    EditAcercaDeComponent,
+    ProyectosComponent,
+    NewProyectoComponent,
+    EditProyectoComponent,
+    
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
-    FormsModule,
+    
     
     
     
